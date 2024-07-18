@@ -18,9 +18,9 @@ function FeaturedTrending() {
                         />
                     </div>
                     <div className="flex-start flex-col gap-3">
-                        <h2 className={`text-3xl font-bold ${j_sans.className}`}>Unique Features Of latest &
+                        <h2 className={`text-3xl md:text-4xl font-bold ${j_sans.className}`}>Unique Features Of latest &
                         Trending Poducts</h2>
-                        <div className="flex-start flex-col gap-3 text-sm text-subText">
+                        <div className="flex-start flex-col gap-3 text-sm lg:text-base text-subText">
                             <li className="marker:text-accent marker:p-1">All frames constructed with hardwood solids and laminates</li>
                             <li className="marker:text-blue marker:p-1">Reinforced with double wood dowels, glue, screw - nails corner 
                             blocks and machine nails</li>
@@ -28,7 +28,7 @@ function FeaturedTrending() {
                         </div>
                         <div className="flex-start gap-2 mt-4">
                             <button className="btn-accent text-sm capitalize px-4 p-3">Add To Cart</button>
-                            <div className="flex-start flex-col gap-1 text-sm">
+                            <div className="flex-start flex-col gap-1 text-sm text-text font-semibold">
                                 <span>B&B Italian Sofa </span>
                                 <span>$32.00</span>
                             </div>

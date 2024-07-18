@@ -20,7 +20,7 @@ function Latest() {
         <>
             <section className="w-full p-6">
                 <div className="w-full max-w-[60rem] mx-auto">
-                    <h2 className={`${j_sans.className} font-bold text-text text-xl md:text-3xl text-center w-full mb-4`}>Latest Products</h2>
+                    <h2 className={`${j_sans.className} font-bold text-text text-2xl md:text-4xl text-center w-full mb-4`}>Latest Products</h2>
                     <div className=" cursor-pointer flex-center flex-wrap gap-2 md:gap-8 text-text font-semibold text-sm whitespace-nowrap">
                         <span onClick={()=>handleTabChange(1)} className={`${tab === 1 ? 'text-accent underline' : ''} duration-300 ease-in-out`}>New Arrival</span>
                         <span onClick={()=>handleTabChange(2)} className={`${tab === 2 ? 'text-accent underline' : ''} duration-300 ease-in-out`}>Best Seller</span>

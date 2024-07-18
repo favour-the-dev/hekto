@@ -18,7 +18,7 @@ const Featured = ()=>{
     return (
         <>
             <section className="p-5">
-                <h2 className={`text-text text-xl md:text-3xl font-bold text-center w-full mb-4 ${j_sans.className}`}>Featured Products</h2>
+                <h2 className={`text-text text-2xl md:text-4xl font-bold text-center w-full mb-4 ${j_sans.className}`}>Featured Products</h2>
                 <div className="grid grid-cols-2 md:flex lg:flex-between md:flex-center md:flex-row md:flex-wrap lg:flex-nowrap max-w-[60rem] mx-auto w-full gap-4">
                     <Card
                     title='Cantilever chair'

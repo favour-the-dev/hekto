@@ -11,7 +11,7 @@ const config: Config = {
       colors: {
         herobg: '#ECD2FA',
         accent: '#FB2E86',
-        text: '#0D0E43',
+        text: '#151875',
         subText: '#8A8FB9',
         violet: '#7E33E0',
         blue: '#2F1AC4',

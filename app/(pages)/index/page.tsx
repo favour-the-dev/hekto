@@ -4,6 +4,7 @@ import Featured from './components/Featured';
 import Latest from './components/latest';
 import Offer from './components/offer';
 import FeaturedTrending from './components/featuredTrending';
+import Trending from './components/Trending';
 const HomePage = () => {
     return (
         <>
@@ -13,6 +14,7 @@ const HomePage = () => {
                 <Latest/>
                 <Offer/>
                 <FeaturedTrending/>
+                <Trending/>
             </div>
         </>
     )

@@ -20,8 +20,8 @@ function Hero() {
                     height={300}
                     />
                     <div className="flex-start flex-col gap-3 md:w-1/2">
-                        <span className="text-xs text-accent capitalize font-bold">best furniture for your castle</span>
-                        <h1 className={`text-4xl font-bold ${jsans.className}`}>New Furniture Collection
+                        <span className="text-sm text-accent capitalize font-bold">best furniture for your castle</span>
+                        <h1 className={`text-4xl  lg:text-6xl font-bold ${jsans.className} w-fit`}>New Furniture Collection
                         Trends in {year}</h1>
                         <p className="sub-text">Explore our collection of premium furniture, designed to elevate your spaces with unparalleled style, comfort, and quality. Shop now."</p>
                         <button className="btn-accent py-3 px-4 w-full sm:w-fit">Shop Now</button>

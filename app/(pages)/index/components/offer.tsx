@@ -12,7 +12,7 @@ const Offer = () => {
         <>
             <section className='w-full p-6 mb-6'>
                 <div className='w-full max-w-[60rem] mx-auto py-6'>
-                    <h2 className={`${j_sans.className} font-bold text-text text-xl md:text-3xl text-center w-full mb-4`}>What Hekto Offers</h2>
+                    <h2 className={`${j_sans.className} font-bold text-text text-2xl md:text-4xl text-center w-full mb-4`}>What Hekto Offers</h2>
                     <div className="flex-center flex-col md:flex-row md:flex-wrap lg:flex-nowrap gap-4 mt-4">
                         <div className="flex-center flex-col shadow-sm rounded-md bg-[#FFFFFF] w-3/4 md:w-fit p-2 gap-2 border-2 border-gray-100">
                             <Image
