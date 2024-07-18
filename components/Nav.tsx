@@ -38,7 +38,7 @@ import { useState } from "react";
                             </div>
                             <div>
                                 <label htmlFor="" className="flex-center">
-                                    <input type="text" className="border border-gray-300 p-1"/>
+                                    <input type="text" className="border border-gray-300 p-1 placeholder:text-sm" placeholder="Search For Products"/>
                                     <button className="w-fit bg-accent text-white text-lg p-2"><CiSearch /></button>
                                 </label>
                             </div>

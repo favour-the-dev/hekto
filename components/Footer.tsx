@@ -13,9 +13,9 @@ function Footer(){
                 <div className="max-w-[60rem] w-full mx-auto flex-start flex-col md:flex-row text-text gap-6 p-6">
                     <div className="flex-start flex-col gap-2">
                         <h1 className={`${j_sans.className} font-bold text-2xl md:text-3xl`}>Hekto</h1>
-                        <label htmlFor="" className="flex-center">
-                            <input type="text" placeholder="Enter email address" className="focus:outline-none border rounded-sm p-2"/>
-                            <button className="btn-accent p-[10px] text-xs md:text-sm text-nowrap">Sign Up</button>
+                        <label htmlFor="" className="flex-start items-center w-full">
+                            <input type="text" placeholder="Enter email address" className="focus:outline-none border rounded-sm p-2 w-2/3 md:w-fit"/>
+                            <button className="btn-accent px-4 p-3 md:p-[10px] text-xs md:text-sm text-nowrap">Sign Up</button>
                         </label>
                         <div className="flex flex-col items-start gap-1 text-subText text-sm">
                             <span className="capitalize">contact info</span>

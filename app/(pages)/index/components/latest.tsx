@@ -27,7 +27,7 @@ function Latest() {
                         <span onClick={()=>handleTabChange(3)} className={`${tab === 3 ? 'text-accent underline' : ''} duration-300 ease-in-out`}>Featured</span>
                         <span onClick={()=>handleTabChange(4)} className={`${tab === 4 ? 'text-accent underline' : ''} duration-300 ease-in-out`}>Special Offer</span>
                     </div>
-                    <div className="mt-6 grid grid-cols-2 lg:flex lg:flex-center lg:flex-row lg:flex-between flex-wrap gap-4 md:gap-8 lg:gap-12">
+                    <div className="mt-6 grid grid-cols-2 lg:flex md:flex-center lg:flex-row lg:flex-between flex-wrap gap-4 md:gap-8 lg:gap-12">
                         <ProductCard
                             title='Comfort Handy Craft'
                             price='42.00'
@@ -54,8 +54,8 @@ function Latest() {
                         />
                         <ProductCard
                             title='Comfort Handy Craft'
-                            price='42.00'
-                            discount='65.00'
+                            price='65.00'
+                            discount=""
                             imageUrl={image5}
                         />
                         <ProductCard
