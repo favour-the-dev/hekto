@@ -30,7 +30,7 @@ import { useState } from "react";
                         <div className=" hidden md:flex-between gap-4 w-full">
                             <div className="flex items-center gap-4 text-sm">
                                 <Link href='/' className={pathname ===  "/" ? "text-accent" : "hover:text-accent"}>Home</Link>
-                                <Link href='' className="hover:text-accent">Pages</Link>
+                                <Link href='/pages' className="hover:text-accent">Pages</Link>
                                 <Link href='' className="hover:text-accent">Products</Link>
                                 <Link href='' className="hover:text-accent">Blog</Link>
                                 <Link href='' className="hover:text-accent">Shop</Link>

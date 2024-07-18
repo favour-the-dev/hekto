@@ -16,6 +16,7 @@ const config: Config = {
         violet: '#7E33E0',
         blue: '#2F1AC4',
         bright_green: '#08D15F',
+        light_bg: '#F6F5FF'
       }
     },
   },
