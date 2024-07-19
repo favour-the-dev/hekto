@@ -26,3 +26,7 @@
         @apply flex justify-between items-center;
     }
 }
+.news-letter{
+    background-image: url('../public/assets/images/newsletterbg.svg');
+    object-fit: contain;
+}

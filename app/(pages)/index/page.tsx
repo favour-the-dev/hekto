@@ -7,6 +7,8 @@ import FeaturedTrending from './components/featuredTrending';
 import Trending from './components/Trending';
 import Discount from './components/Discount';
 import Topcategories from './components/Topcategories';
+import NewsletterBanner from './components/NewsletterBanner';
+import BlogNews from './components/BlogNews';
 const HomePage = () => {
     return (
         <>
@@ -19,6 +21,8 @@ const HomePage = () => {
                 <Trending/>
                 <Discount/>
                 <Topcategories/>
+                <NewsletterBanner/>
+                <BlogNews/>
             </div>
         </>
     )
