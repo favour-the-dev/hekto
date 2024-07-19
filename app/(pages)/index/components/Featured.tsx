@@ -4,7 +4,7 @@ import image1 from '@public/assets/feature/img-1.svg';
 import image2 from '@public/assets/feature/img-2.svg';
 import image3 from '@public/assets/feature/img-3.svg';
 import image4 from '@public/assets/feature/img-4.svg';
-import Card from "./_components/card";
+import Card from "./_components/FeaturedCard";
 import { useState } from "react";
 const j_sans = Josefin_Sans({
     subsets: ["latin"]
@@ -17,7 +17,7 @@ const Featured = ()=>{
     }
     return (
         <>
-            <section className="p-5">
+            <section className="p-5 my-6">
                 <h2 className={`text-text text-2xl md:text-4xl font-bold text-center w-full mb-4 ${j_sans.className}`}>Featured Products</h2>
                 <div className="grid grid-cols-2 md:flex lg:flex-between md:flex-center md:flex-row md:flex-wrap lg:flex-nowrap max-w-[60rem] mx-auto w-full gap-4">
                     <Card

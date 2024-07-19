@@ -5,6 +5,8 @@ import Latest from './components/latest';
 import Offer from './components/offer';
 import FeaturedTrending from './components/featuredTrending';
 import Trending from './components/Trending';
+import Discount from './components/Discount';
+import Topcategories from './components/Topcategories';
 const HomePage = () => {
     return (
         <>
@@ -15,6 +17,8 @@ const HomePage = () => {
                 <Offer/>
                 <FeaturedTrending/>
                 <Trending/>
+                <Discount/>
+                <Topcategories/>
             </div>
         </>
     )

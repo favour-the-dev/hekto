@@ -1,5 +1,5 @@
 import { Josefin_Sans } from "next/font/google";
-import TrendingProducts from "./_components/trendingProducts";
+import TrendingProducts from "./_components/TrendingCard";
 import Link from "next/link";
 import Image from "next/image";
 import image1 from "@public/assets/trending/img-1.svg";
@@ -17,7 +17,7 @@ const j_sans = Josefin_Sans({
 function Trending() {
     return ( 
         <>
-            <section className="w-full p-5 flex-center">
+            <section className="w-full p-5 flex-center my-8">
                 <div className="w-full max-w-[60rem] mx-auto">
                     <h2 className={`${j_sans.className} font-bold text-text text-2xl md:text-4xl text-center w-full mb-4`}>Trending Products</h2>
                     <div className="mt-6 grid grid-cols-2 lg:flex lg:flex-center gap-4 md:gap-8 place-items-center">
@@ -74,7 +74,7 @@ function Trending() {
                             />
                         </div>
                         <div className="flex-start flex-col gap-4 cols-span-2 h-fit">
-                            <div className="flex-center gap-2 w-full">
+                            <div className="flex-start gap-2 w-full">
                                 <div className="bg-[#F5F6F8] px-3 p-1 rounded-sm">
                                     <Image
                                     src={image5}
@@ -89,7 +89,7 @@ function Trending() {
                                     <span>$38.00</span>
                                 </div>
                             </div>
-                            <div className="flex-center gap-2 w-full">
+                            <div className="flex-start gap-2 w-full">
                                 <div className="bg-[#F5F6F8] px-3 p-1 rounded-sm">
                                     <Image
                                     src={image6}
@@ -104,7 +104,7 @@ function Trending() {
                                     <span>$38.00</span>
                                 </div>
                             </div>
-                            <div className="flex-center gap-2 w-full">
+                            <div className="flex-start gap-2 w-full">
                                 <div className="bg-[#F5F6F8] px-3 p-1 rounded-sm">
                                     <Image
                                     src={image7}

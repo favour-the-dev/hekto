@@ -7,7 +7,7 @@ const j_sans = Josefin_Sans({
 function FeaturedTrending() {
     return ( 
         <>
-            <section className="w-full bg-herobg text-text p-6">
+            <section className="w-full bg-herobg text-text p-6 my-6">
                 <div className="w-full max-w-[60rem] mx-auto flex-center flex-col md:flex-row gap-4">
                     <div>
                         <Image

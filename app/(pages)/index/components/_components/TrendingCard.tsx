@@ -1,4 +1,5 @@
 import Image from "next/image";
+import sold from "@public/assets/latest/sold.svg";
 import { FaSearchPlus } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import { IoCartOutline } from "react-icons/io5";
@@ -13,6 +14,17 @@ const TrendingProducts = ({title, image, price, discountedPrice} : Trending) => 
     return (
         <>
             <div className="group flex-center flex-col w-full max-w-[250px] h-fit bg-white rounded-sm shadow-sm cursor-pointer p-2 relative">
+                {
+                    discountedPrice > 0 && 
+                    <div className="absolute top-0 left-0 opacity-0 group-hover:opacity-100 ease-in-out duration-300">
+                        <Image
+                        src={sold}
+                        alt="sold"
+                        width={80}
+                        height={80}
+                        />
+                    </div>
+                }
                 <div className="flex-center flex-col gap-2 text-xl opacity-0 group-hover:opacity-100 ease-in-out duration-300 absolute left-2 bottom-[35%] lg:bottom-[30%]">
                     <span className="hover:bg-[#EEEFFB] text-blue p-1 rounded-full"><IoCartOutline/></span>
                     <span className="text-blue hover:bg-[#EEEFFB] p-1 rounded-full"><CiHeart /></span>

@@ -1,7 +1,7 @@
 "use client"
 import { Josefin_Sans } from "next/font/google";
 import { useState } from "react";
-import ProductCard from "./_components/productCard";
+import ProductCard from "./_components/LatestCard";
 import image1 from "@public/assets/latest/img-1.svg";
 import image2 from "@public/assets/latest/img-2.svg";
 import image3 from "@public/assets/latest/img-3.svg";
@@ -18,7 +18,7 @@ function Latest() {
     }
     return ( 
         <>
-            <section className="w-full p-6">
+            <section className="w-full p-6 my-6">
                 <div className="w-full max-w-[60rem] mx-auto">
                     <h2 className={`${j_sans.className} font-bold text-text text-2xl md:text-4xl text-center w-full mb-4`}>Latest Products</h2>
                     <div className=" cursor-pointer flex-center flex-wrap gap-2 md:gap-8 text-text font-semibold text-sm whitespace-nowrap">

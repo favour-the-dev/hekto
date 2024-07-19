@@ -10,7 +10,7 @@ const j_sans = Josefin_Sans({
 const Offer = () => {
     return (
         <>
-            <section className='w-full p-6 mb-6'>
+            <section className='w-full p-6 my-6'>
                 <div className='w-full max-w-[60rem] mx-auto py-6'>
                     <h2 className={`${j_sans.className} font-bold text-text text-2xl md:text-4xl text-center w-full mb-4`}>What Hekto Offers</h2>
                     <div className="flex-center flex-col md:flex-row md:flex-wrap lg:flex-nowrap gap-4 mt-4">
