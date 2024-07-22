@@ -100,7 +100,7 @@ import { useState } from "react";
                                                 duration: 0.5
                                             }}
                                             onClick={(event: any)=>{handleLanguageChange(event)}}
-                                            className="bg-white rounded-sm w-full text-subText text-xs flex-center flex-col gap-2">
+                                            className={`bg-white rounded-sm w-full text-subText text-xs flex-center flex-col gap-2`}>
                                                 <span className="border-b border-text border-opacity-50 p-1 capitalize hover:text-accent">English</span>
                                                 <span className="border-b border-text border-opacity-50 p-1 capitalize hover:text-accent">Français</span>
                                                 <span className="border-b border-text border-opacity-50 p-1 capitalize hover:text-accent">Español</span>
