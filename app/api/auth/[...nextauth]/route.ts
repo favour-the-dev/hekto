@@ -8,7 +8,7 @@ interface GoogleProviderOptions {
     scope: string[]
 }
 
-export const authOptions: AuthOptions = {
+const authOptions: AuthOptions = {
     providers: [
         Google({
             clientId: process.env.GOGGLE_CLIENT_ID,
