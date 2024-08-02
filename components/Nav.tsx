@@ -31,6 +31,16 @@ import { useState } from "react";
             setCurrency(element.textContent)
         }
         const [isNavCLicked, setIsNavClicked] = useState<boolean>(false);
+        const handleNavClicked = (e: any)=>{
+            const element = e.target as HTMLElement;
+            if(element.id === "lang" || element.id === "currency"){
+                setIsNavClicked(true);
+            }else {
+                setTimeout(() =>{
+                    setIsNavClicked(false);
+                }, 600)
+            }
+        }
         return ( 
             <>
                 <Banner/>
@@ -70,6 +80,9 @@ import { useState } from "react";
                             {
                                 isNavCLicked && (
                                     <motion.div 
+                                    onClick={(event: any)=> {
+                                        handleNavClicked(event)
+                                    }}
                                     initial={{opacity: 0}}
                                     animate={isNavCLicked ? {opacity: 1} : {opacity: 0}}
                                     transition={{
@@ -90,7 +103,8 @@ import { useState } from "react";
                                         <Link href='' className="hover:text-accent">Blog</Link>
                                         <Link href='' className="hover:text-accent">Shop</Link>
                                         <Link href='' className="hover:text-accent">Contact</Link>
-                                        <div className="relative" onClick={()=> setOpenLanguageSelect((prevState: boolean)=> !prevState)}>
+                                        <Link href='/login' className="hover:text-accent">Login</Link>
+                                        <div id="lang" className="relative" onClick={()=> setOpenLanguageSelect((prevState: boolean)=> !prevState)}>
                                             <span className="flex-center gap-2"><IoIosArrowDown />{language}</span>
                                             <motion.div
                                             initial={{opacity: 0, maxHeight: 0}}
@@ -108,6 +122,7 @@ import { useState } from "react";
                                             </motion.div>
                                         </div>
                                         <div
+                                        id="currency"
                                         onClick={()=> setOpenCurrencySelect((prevState: boolean)=> !prevState)}
                                         className="relative p-1 w-fit">
                                             <span className="flex-center gap-2"><IoIosArrowDown />{currency}</span>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import Nav from "@components/Nav";
 import Footer from "@components/Footer";
+import NextAuthProvider from "./Providers";
 import "@styles/global.css";
 
 const poppins = Poppins(
@@ -24,11 +25,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <Nav/>
-        <main className="">
-          {children}
-        </main>
-        <Footer/>
+        <NextAuthProvider>
+          <Nav/>
+          <main className="">
+            {children}
+          </main>
+          <Footer/>
+        </NextAuthProvider>
       </body>
     </html>
   );
