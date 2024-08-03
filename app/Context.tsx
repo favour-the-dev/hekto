@@ -24,3 +24,9 @@ function AppContext({children}: {children: React.ReactNode}) {
 }
 
 export default AppContext;
+
+// GOGGLE_CLIENT_ID="420297582008-l7gempo2ctokj4s1f74miqb0l67r5n2u.apps.googleusercontent.com"
+// GOOGLE_CLIENT_SECRET="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"
+// NEXT_AUTH_SECRET="oOuHWwfc139sQliBHdWytd6HkIvqvU4KuumLuLB5L1I="
+// MONGODB_URI = "mongodb+srv://favourto91:Scm2y01DMRuOHF1v@cluster0.5jtrx3n.mongodb.net/"
+// password = "Scm2y01DMRuOHF1v"
