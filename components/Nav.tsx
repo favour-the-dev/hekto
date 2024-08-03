@@ -33,8 +33,9 @@ import { useState } from "react";
         const [isNavCLicked, setIsNavClicked] = useState<boolean>(false);
         const handleNavClicked = (e: any)=>{
             const element = e.target as HTMLElement;
-            if(element.id === "lang" || element.id === "currency"){
-                setIsNavClicked(true);
+            const parentDiv = element.parentElement as HTMLElement || null;
+            if(parentDiv.id === "lang" || parentDiv.id === "currency"){
+                return
             }else {
                 setTimeout(() =>{
                     setIsNavClicked(false);
@@ -103,7 +104,6 @@ import { useState } from "react";
                                         <Link href='' className="hover:text-accent">Blog</Link>
                                         <Link href='' className="hover:text-accent">Shop</Link>
                                         <Link href='' className="hover:text-accent">Contact</Link>
-                                        <Link href='/login' className="hover:text-accent">Login</Link>
                                         <div id="lang" className="relative" onClick={()=> setOpenLanguageSelect((prevState: boolean)=> !prevState)}>
                                             <span className="flex-center gap-2"><IoIosArrowDown />{language}</span>
                                             <motion.div

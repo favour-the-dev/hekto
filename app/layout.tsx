@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import Nav from "@components/Nav";
+import AppContext from "./Context";
 import Footer from "@components/Footer";
 import NextAuthProvider from "./Providers";
 import "@styles/global.css";
@@ -16,7 +17,6 @@ export const metadata: Metadata = {
   title: "Hekto",
   description: "Your favourite online shopping mall",
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -26,11 +26,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.className}>
         <NextAuthProvider>
-          <Nav/>
-          <main className="">
-            {children}
-          </main>
-          <Footer/>
+          <AppContext>
+            <Nav/>
+            <main className="">
+              {children}
+            </main>
+            <Footer/>
+          </AppContext>
         </NextAuthProvider>
       </body>
     </html>
