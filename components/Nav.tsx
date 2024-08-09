@@ -2,6 +2,7 @@
 import { Josefin_Sans } from "next/font/google";
 import Banner from "@components/Banner";
 import { CiSearch } from "react-icons/ci";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -12,6 +13,7 @@ import { CgProfile } from "react-icons/cg";
 import { IoCartOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useSession } from "next-auth/react";
     const jsans = Josefin_Sans({
         subsets: ["latin"]
     })
@@ -42,6 +44,10 @@ import { useState } from "react";
                 }, 600)
             }
         }
+        const { status, data } = useSession();
+        const nameData = data?.user?.name as string;
+        const imageData = data?.user?.image as string;
+        const userName = nameData?.split(' ')[0]
         return ( 
             <>
                 <Banner/>
@@ -140,7 +146,8 @@ import { useState } from "react";
                                                 <span className="p-1 capitalize hover:text-accent">GBP</span>
                                             </motion.div>
                                         </div>
-                                        <Link href='/login' className="flex-center gap-2"><CgProfile />Login</Link>
+                                        {status === "authenticated" ? <Link href='/profile' className="flex-center gap-2"><Image src={imageData} alt="" width={20} height={20} className="rounded-full"/>{userName}</Link> : 
+                                        <Link href='/login' className="flex-center gap-2"><CgProfile />Login</Link>}
                                         <Link href='/wishlist' className="flex-center gap-2"> <CiHeart />wishlist</Link>
                                         <Link href='/cart' className="flex-center gap-2"><IoCartOutline />Cart</Link>
                                     </motion.div>

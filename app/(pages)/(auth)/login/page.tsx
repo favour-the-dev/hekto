@@ -4,11 +4,24 @@ import Image from "next/image";
 import Link from "next/link";
 import carousel from "@public/assets/images/carousel.svg";
 import { FcGoogle } from "react-icons/fc";
+import { signIn } from "next-auth/react";
+import { useSession } from "next-auth/react";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 const j_sans = Josefin_Sans({
     subsets: ["latin"]
 })
-
 function Login() {
+    const {status} = useSession();
+    const router = useRouter();
+    const handleGoogleSignIn = ()=>{
+        signIn('google')
+    }
+    useEffect(()=>{
+        if(status.trim() === "authenticated"){
+            return router.push('/profile')
+        }
+    }, [status])
     return ( 
         <>
             <section className="w-full flex-center flex-col">
@@ -39,7 +52,7 @@ function Login() {
                         <div className="relative w-full flex-center flex-col">
                             <span className="before:w-[45%] before:top-[50%] before:bg-black before:absolute before:h-[1px] before:left-0 after:w-[45%] after:top-[50%] after:bg-black after:absolute after:h-[1px] after:right-0 font-semibold text-text">OR</span>
                         </div>
-                        <button className="w-full flex justify-center gap-3 items-center border border-gray-300 p-2 text-sm rounded-sm"><FcGoogle className="text-2xl"/>Sign in with Google</button>
+                        <button onClick={()=> handleGoogleSignIn()} className="w-full flex justify-center gap-3 items-center border border-gray-300 p-2 text-sm rounded-sm hover:border-accent hover:text-accent duration-300 ease-linear"><FcGoogle className="text-2xl"/>Sign in with Google</button>
                         <span className="text-subText text-sm cursor-pointer">Dont have an Account with us? <Link href="/signup" className="text-accent hover:underline">Sign Up</Link></span>
                     </div>
                     <div className="my-8"><Image src={carousel} alt="sponsors" width={800} height={800}/></div>

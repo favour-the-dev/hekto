@@ -1,5 +1,6 @@
 "use client"
 import Link from "next/link";
+import Image from "next/image";
 import { MdOutlineMailOutline } from "react-icons/md";         
 import { CiPhone } from "react-icons/ci";
 import { IoIosArrowDown } from "react-icons/io";
@@ -7,6 +8,7 @@ import { CiHeart } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
 import { IoCartOutline } from "react-icons/io5";
 import { useState, MouseEvent } from "react";
+import { useSession } from "next-auth/react";
 function Banner() {
     const [language, setLanguage] = useState<string | null>('English');
     const [currency, setCurrency] = useState<string | null>('USD');
@@ -17,7 +19,11 @@ function Banner() {
     const handleLanguageChange = (event: MouseEvent)=>{
         const element = event.target as HTMLElement;
         setLanguage(element.textContent)
-    }
+    };
+    const { status, data } = useSession();
+    const nameData = data?.user?.name as string;
+    const userName = nameData?.split(' ')[0]
+    const imageData = data?.user?.image as string;
     return ( 
         <>
             <div className="bg-violet text-white flex-center flex-col w-full p-3">
@@ -45,7 +51,8 @@ function Banner() {
                                 <span className="p-1 capitalize hover:text-accent">GBP</span>
                             </div>
                         </div>
-                        <Link href='/login' className="flex-center gap-2">Login <CgProfile /></Link>
+                        {status === 'authenticated' ? <div><Link href='/profile' className="flex-center gap-2"><Image src={imageData} alt="" width={20} height={20} className="rounded-full"/>{userName}</Link></div> : 
+                        <Link href='/login' className="flex-center gap-2">Login <CgProfile /></Link>}
                         <Link href='/wishlist' className="flex-center gap-2">wishlist <CiHeart className="text-xl"/></Link>
                     </div>
                     <Link href='/cart' className="text-xl hidden md:block"><IoCartOutline /></Link>
